@@ -4,7 +4,7 @@
 <suite name="Suite"> 
   <test name="NewtoursSuite">
     <classes>
-       <class name= "com.bitm.newtourstest.test.LogInTest"/> 
+        <class name= "com.bitm.newtourstest.test.LogInTest"/>
        <class name="com.bitm.newtourstest.test.FlightFinder"/>  
     </classes>
   </test>

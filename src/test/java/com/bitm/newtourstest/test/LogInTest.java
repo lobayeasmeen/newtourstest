@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 import com.bitm.newtourstest.dataprovider.LogInDataProvider;
 import com.bitm.newtourstest.dto.LogIn;
 import com.bitm.newtourstest.utils.DriverManager;
-import com.bitm.newtourstest.utils.UrlTextUtils;
+import com.bitm.newtourstest.utils.UrlTextUtils.UrlLogin;
 import com.bitm.newtourstest.utils.XpathUtils;
 
 public class LogInTest {
@@ -23,8 +23,8 @@ public class LogInTest {
 	{
 	//	driver = DriverManager.driver;
 		driver = DriverManager.driver;
-		driver.get(UrlTextUtils.BASE_URL);
-		Assert.assertEquals(driver.getTitle(), UrlTextUtils.LOGIN_PAGE_TITLE);
+		driver.get(UrlLogin.BASE_URL);
+		Assert.assertEquals(driver.getTitle(), UrlLogin.LOGIN_PAGE_TITLE);
 		System.out.println("Title Successful!!!");
 		
 	}

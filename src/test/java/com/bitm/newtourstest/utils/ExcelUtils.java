@@ -13,6 +13,7 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
+import com.bitm.newtourstest.dto.FlightFinder;
 import com.bitm.newtourstest.dto.LogIn;
 
 public class ExcelUtils {
@@ -39,6 +40,7 @@ public class ExcelUtils {
 		     break;
 		    case 1:
 		     excellogin.setPassword(cell.getStringCellValue());
+		     cellCounter++;
 		     break;
 		    default:
 		     break;
@@ -53,6 +55,46 @@ public class ExcelUtils {
 		  return logins;
 		}
 
+	public static List<FlightFinder> getFlightFinder() throws IOException
+	{
+		List<FlightFinder> FlightFinder= new ArrayList<FlightFinder>();
+		
+	//	DataFormatter 
+		Iterator<Row> iterator = ExcelUtils.getSheet(1).iterator();
+        while (iterator.hasNext()) {
+            Row nextRow = iterator.next();
+            Iterator<Cell> cellIterator = nextRow.cellIterator();
+            FlightFinder excelflightfinder=new FlightFinder();
+            byte cellCounter=0;
+            while (cellIterator.hasNext()) {
+                Cell cell = cellIterator.next();
+                switch (cellCounter) {
+    case 0:
+     excelflightfinder.setPassengers(cell.getStringCellValue());
+     cellCounter++;
+     break;
+    case 1:
+     excelflightfinder.setDepartingFrom(cell.getStringCellValue());
+     cellCounter++;
+    break;
+    case 2:
+     excelflightfinder.setDepartOnMonth(cell.getStringCellValue());
+     cellCounter++;
+    break;
+    case 3:
+     excelflightfinder.setDepartONDate(cell.getStringCellValue());
+     //cellCounter++;
+    break;
+    default:
+    	break;
+	}
+            }
+            FlightFinder.add(excelflightfinder);
+        }
+        close();
+        return FlightFinder;
+	}
+	
 	private static void close() throws IOException {
 		
 		workbook.close();

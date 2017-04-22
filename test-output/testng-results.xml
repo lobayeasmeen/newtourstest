@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="42362" started-at="2017-04-22T05:45:19Z" finished-at="2017-04-22T05:46:02Z">
+  <suite name="Suite" duration-ms="14509" started-at="2017-04-22T15:04:49Z" finished-at="2017-04-22T15:05:04Z">
     <groups>
     </groups>
-    <test name="NewtoursSuite" duration-ms="42362" started-at="2017-04-22T05:45:19Z" finished-at="2017-04-22T05:46:02Z">
+    <test name="NewtoursSuite" duration-ms="14509" started-at="2017-04-22T15:04:49Z" finished-at="2017-04-22T15:05:04Z">
       <class name="com.bitm.newtourstest.test.LogInTest">
-        <test-method status="PASS" signature="checkTitle()[pri:0, instance:com.bitm.newtourstest.test.LogInTest@4af044]" name="checkTitle" duration-ms="37239" started-at="2017-04-22T11:45:19Z" finished-at="2017-04-22T11:45:57Z">
+        <test-method status="PASS" signature="checkTitle()[pri:0, instance:com.bitm.newtourstest.test.LogInTest@4af044]" name="checkTitle" duration-ms="12386" started-at="2017-04-22T21:04:49Z" finished-at="2017-04-22T21:05:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- checkTitle -->
-        <test-method status="PASS" signature="checkLogin(java.util.List)[pri:0, instance:com.bitm.newtourstest.test.LogInTest@4af044]" name="checkLogin" duration-ms="1037" started-at="2017-04-22T11:46:01Z" data-provider="loginData" finished-at="2017-04-22T11:46:02Z">
+        <test-method status="PASS" signature="checkLogin(java.util.List)[pri:0, instance:com.bitm.newtourstest.test.LogInTest@4af044]" name="checkLogin" duration-ms="980" started-at="2017-04-22T21:05:03Z" data-provider="loginData" finished-at="2017-04-22T21:05:04Z">
           <params>
             <param index="0">
               <value>
