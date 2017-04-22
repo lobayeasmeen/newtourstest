@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]">
+  <test name="NewtoursSuite(failed)">
+    <classes>
+      <class name="com.bitm.newtourstest.test.LogInTest">
+        <methods>
+          <include name="checkTitle"/>
+          <include name="checkLogin" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.bitm.newtourstest.test.LogInTest -->
+    </classes>
+  </test> <!-- NewtoursSuite(failed) -->
+</suite> <!-- Failed suite [Suite] -->
