@@ -9,7 +9,7 @@ public class DriverManager {
 	
 	static {
 		
-		System.setProperty("webdriver.gecko.driver", "F://Selenium test environment/geckodriver-v0.15.0-win32/geckodriver.exe");
+		System.setProperty("webdriver.gecko.driver", "F://Selenium test environment/geckodriver-v0.16.1-win32/geckodriver.exe");
 	}
 	public static WebDriver driver = new FirefoxDriver ();
 	

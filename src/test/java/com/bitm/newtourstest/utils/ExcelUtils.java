@@ -8,6 +8,7 @@ import java.util.List;
 
 //import org.apache.poi.sl.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
@@ -40,7 +41,7 @@ public class ExcelUtils {
 		     break;
 		    case 1:
 		     excellogin.setPassword(cell.getStringCellValue());
-		     cellCounter++;
+		     //cellCounter++;
 		     break;
 		    default:
 		     break;
@@ -60,6 +61,7 @@ public class ExcelUtils {
 		List<FlightFinder> FlightFinder= new ArrayList<FlightFinder>();
 		
 	//	DataFormatter 
+		DataFormatter formatter = new DataFormatter();
 		Iterator<Row> iterator = ExcelUtils.getSheet(1).iterator();
         while (iterator.hasNext()) {
             Row nextRow = iterator.next();
@@ -70,20 +72,20 @@ public class ExcelUtils {
                 Cell cell = cellIterator.next();
                 switch (cellCounter) {
     case 0:
-     excelflightfinder.setPassengers(cell.getStringCellValue());
+     excelflightfinder.setPassengers(formatter.formatCellValue(cell));
      cellCounter++;
      break;
     case 1:
-     excelflightfinder.setDepartingFrom(cell.getStringCellValue());
+     excelflightfinder.setDepartingFrom(formatter.formatCellValue(cell));
      cellCounter++;
     break;
     case 2:
-     excelflightfinder.setDepartOnMonth(cell.getStringCellValue());
+     excelflightfinder.setDepartOnMonth(formatter.formatCellValue(cell));
      cellCounter++;
     break;
     case 3:
-     excelflightfinder.setDepartONDate(cell.getStringCellValue());
-     //cellCounter++;
+     excelflightfinder.setDepartONDate(formatter.formatCellValue(cell));
+    // cellCounter++;
     break;
     default:
     	break;

@@ -41,7 +41,7 @@ public class FlightFinder {
 	
 	public String toString()
 	{
-		return "FlightFinder [Passengers= "+ Passengers +",DepartingFrom="+ DepartingFrom +", DepartOnMonth = "+ DepartOnMonth +",DepartONDate= "+DepartONDate+"]";
+		return "FlightFinder [Passengers= "+ Passengers +",DepartingFrom="+ DepartingFrom +", DepartOnMonth = "+ DepartOnMonth +",DepartONDate= "+ DepartONDate +"]";
 	}
 	
 	

@@ -5,10 +5,15 @@
     <classes>
       <class name="com.bitm.newtourstest.test.LogInTest">
         <methods>
-          <include name="checkTitle"/>
           <include name="checkLogin" invocation-numbers="0"/>
         </methods>
       </class> <!-- com.bitm.newtourstest.test.LogInTest -->
+      <class name="com.bitm.newtourstest.test.FlightFinder">
+        <methods>
+          <include name="checkTitle"/>
+          <include name="checkFlightFinder" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.bitm.newtourstest.test.FlightFinder -->
     </classes>
   </test> <!-- NewtoursSuite(failed) -->
 </suite> <!-- Failed suite [Suite] -->

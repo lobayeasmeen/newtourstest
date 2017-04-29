@@ -1,3 +1,4 @@
+
 package com.bitm.newtourstest.test;
 
 import java.util.List;
@@ -10,7 +11,7 @@ import org.testng.annotations.Test;
 import com.bitm.newtourstest.dataprovider.LogInDataProvider;
 import com.bitm.newtourstest.dto.LogIn;
 import com.bitm.newtourstest.utils.DriverManager;
-import com.bitm.newtourstest.utils.UrlTextUtils.UrlLogin;
+import com.bitm.newtourstest.utils.UrlTextUtils;
 import com.bitm.newtourstest.utils.XpathUtils;
 
 public class LogInTest {
@@ -23,9 +24,14 @@ public class LogInTest {
 	{
 	//	driver = DriverManager.driver;
 		driver = DriverManager.driver;
-		driver.get(UrlLogin.BASE_URL);
-		Assert.assertEquals(driver.getTitle(), UrlLogin.LOGIN_PAGE_TITLE);
+		driver.get(UrlTextUtils.BASE_URL);
+		Assert.assertEquals(driver.getTitle(), UrlTextUtils.LOGIN_PAGE_TITLE);
+		
+		try{
+            throw new Exception();
+        } catch(Exception e){
 		System.out.println("Title Successful!!!");
+        }
 		
 	}
 	
@@ -38,7 +44,12 @@ public class LogInTest {
 		driver.findElement(By.xpath(XpathUtils.LogIn.INPUT_USER_NAME)).sendKeys(excellogin.getUsername());
 		driver.findElement(By.xpath(XpathUtils.LogIn.INPUT_USER_PASS)).sendKeys(excellogin.getPassword());
 		driver.findElement(By.xpath(XpathUtils.LogIn.BUTTON_SIGNIN)).submit();
+		
+		try{
+            throw new Exception();
+        } catch(Exception e){
 		System.out.println("Login Successful!!!");
+        }
 	}
 	
 	}
